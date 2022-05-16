@@ -18,11 +18,10 @@ def score_game(tested_func, minium_range: int = 1, maximum_range: int = 101) -> 
     random_array = np.random.randint(
         minium_range, maximum_range, size=(1000))  # загадали список чисел в соответствии с диапазоном
     count_ls = [tested_func(number, minium_range, maximum_range) for number in random_array] # Заполняем список попыток
-    score = int(np.mean(count_ls))  # находим среднее количество попыток
-    print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток')
-    return (score)
+    return int(np.mean(count_ls))
 
 
 if __name__ == "__main__":
     # Если запускаем из тела скрипта, то выполняется:
-    score_game(predictor, 1, 101)
+    score = score_game(predictor, 1, 101)
+    print(f'Ваш алгоритм угадывает число в среднем за: {score} попыток')
