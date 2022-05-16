@@ -21,7 +21,6 @@ def number_predict(guessed_number: int = 49, minium_range: int = 1, maximum_rang
         elif averaging < guessed_number:
             minium_range = averaging
         else:
-            # print(f"Число {guessed_number}: отгадано за {predict_counter} попыток.")
             break  # отгадано: выход из цикла
     return predict_counter
 
@@ -31,6 +30,6 @@ if __name__ == "__main__":
     # Если запускаем из тела скрипта, то выполняется:
     min_range = 1
     max_range = 10001
-    random_number = np.random.randint(min_range, max_range)
-    counter = number_predict(random_number, min_range, max_range)
+    random_number = np.random.randint(min_range, max_range) # Загадываем случайное число в рамках диапазона
+    counter = number_predict(random_number, min_range, max_range) 
     print(f"Число {random_number}: отгадано за {counter} попыток.")
