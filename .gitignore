@@ -3,3 +3,4 @@ game.py
 game.ipynb
 __pycache__/
 README_old.md
+.vscode/launch.json
